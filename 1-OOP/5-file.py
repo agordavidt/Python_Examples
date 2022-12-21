@@ -17,6 +17,7 @@ class Dog:
         self.__age = max(0, value)
         #this is the setter method, which makes sure the age is always at least 0
 
+
 dog1 = Dog("Fido", "labrador", 3)
 print(dog1.age)
 dog1.age = -4 
