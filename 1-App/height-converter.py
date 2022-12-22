@@ -39,8 +39,24 @@ def convert_height():
         # Display the result
         result_label.config(text=f"{height} meters is equal to {height_in_inches:.2f} inches")
 
+# Create a radio button to allow the user to selct the unit of measurement for their height
+unit = tk.StringVar()
+unit.set("cm") # default value
 
-# Run the main loop
+# Create radio buttons for each unit of measurement
+cm_radio = tk.Radiobutton(window, text="cm", variable=unit, value="cm")
+cm_radio.pack()
+in_radio = tk.Radiobutton(window, text="in", variable=unit, value="in")
+in_radio.pack()
+m_radio = tk.Radiobutton(window, text="m", variable=unit, value="m")
+m_radio.pack()
+
+# Create a buton to initiate the conversion
+convert_button = tk.Button(window, text="Convert", command=convert_height)
+convert_button.pack()
+
+
+
 window.mainloop()
 
 
