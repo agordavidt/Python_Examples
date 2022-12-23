@@ -1,7 +1,7 @@
 import sys
 
 def factors(n):
-	"""Returns a list of the two smallest factors of n""""
+	"""Returns a list of the two smallest factors of n"""
 	# Check if n is even
 	if n % 2 == 0:
 		return [2, n // 2]
@@ -10,7 +10,7 @@ def factors(n):
 		if n % i == 0:
 			return [i, n // i]
 	# If no factors are found, n is prime
-    return [n, 1]
+    
 
 def main():
 	# Open the file and read each line
